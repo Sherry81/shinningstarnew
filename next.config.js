@@ -3,6 +3,10 @@ const nextConfig = {
     API_URL: "http://localhost:4000/graphql",
   },
   reactStrictMode: true,
+  output: 'standalone',
+  experimental: {
+    outputStandalone: true,
+  },
   swcMinify: true,
   images: {
     unoptimized: true,
