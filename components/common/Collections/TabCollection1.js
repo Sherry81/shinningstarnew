@@ -331,7 +331,7 @@ const TabContent = ({
         sale: true,
         discount: true,
         variants: [{
-          id:'3124',
+          id:'3124', 
           sku:'4123',
           size:'3124',
           color:'red',
