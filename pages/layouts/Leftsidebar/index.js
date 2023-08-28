@@ -19,14 +19,14 @@ const Leftsidebar = () => {
       <ModalComponent />
       <HeaderEleven logoName="logo.png" />
       <div className="left-sidebar_space">
-        <HomeSlider />
+        {/* <HomeSlider /> */}
         <Products type="metro" col="metro" />
-        <Service sectionClass={"service border-section small-section "} />
+        {/* <Service sectionClass={"service border-section small-section "} />
         <Blog type="fashion" title="title1" inner="title-inner1" />
         <Instgram type="fashion" />
         <div className="section-b-space">
           <LogoBlock />
-        </div>
+        </div> */}
         <MasterFooter
           footerClass={`footer-light`}
           footerLayOut={"light-layout upper-footer"}

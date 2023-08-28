@@ -16,7 +16,7 @@ const LogoBlock = ({ designClass }) => {
   ];
   return (
     <section className={designClass}>
-      <Container>
+      {/* <Container>
         <Row>
           <Col md="12">
             <Slider {...Slider6} className="slide-6 no-arrow">
@@ -34,7 +34,7 @@ const LogoBlock = ({ designClass }) => {
             </Slider>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
     </section>
   );
 };

@@ -29,7 +29,7 @@ const ServiceLayout = ({ sectionClass }) => {
   return (
     <Container>
       <section className={sectionClass}>
-        <Row>
+        {/* <Row>
           {Data.map((data, index) => {
             return (
               <Col md="4" className="service-block" key={index}>
@@ -41,7 +41,7 @@ const ServiceLayout = ({ sectionClass }) => {
               </Col>
             );
           })}
-        </Row>
+        </Row> */}
       </section>
     </Container>
   );

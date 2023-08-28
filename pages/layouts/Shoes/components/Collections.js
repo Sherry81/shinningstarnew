@@ -47,7 +47,7 @@ const MasterCollection = ({ img, title, link, desc, classes }) => {
 const Collections = () => {
   return (
     <Fragment>
-      <section className="section-b-space p-t-0 ratio_40">
+      {/* <section className="section-b-space p-t-0 ratio_40">
         <Container>
           <Row className="partition2">
             {Data.map((data, i) => {
@@ -64,7 +64,7 @@ const Collections = () => {
             })}
           </Row>
         </Container>
-      </section>
+      </section> */}
     </Fragment>
   );
 };

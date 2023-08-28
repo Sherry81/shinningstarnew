@@ -23,7 +23,7 @@ const Banner = () => {
   return (
     <Fragment>
       <section className="p-0">
-        <Slider className="slide-1 home-slider">
+        {/* <Slider className="slide-1 home-slider">
           {Data.map((data, i) => {
             return (
               <MasterBanner
@@ -35,7 +35,7 @@ const Banner = () => {
               />
             );
           })}
-        </Slider>
+        </Slider> */}
       </section>
     </Fragment>
   );

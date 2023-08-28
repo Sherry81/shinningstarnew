@@ -45,13 +45,317 @@ const GET_PRODUCTS = gql`
 `;
 
 const TabContent = ({
-  data,
+  // data,
   loading,
   startIndex,
   endIndex,
   cartClass,
   backImage,
 }) => {
+  const data = {
+    products: {
+      items: [{
+        id: 1243,
+        title: 'Pubg mobile 1030 UC',
+        description: 'Pubg vouch',
+        type: 'simple',
+        brand: 'vouch',
+        category: 'pubg',
+        price: '300',
+        new: 'false',
+        stock: true,
+        sale: true,
+        discount: true,
+        variants: [{
+          id:'3124',
+          sku:'4123',
+          size:'3124',
+          color:'red',
+          image_id:'423'
+        }],
+        images :
+        [{
+          image_id: '423',
+          id: '23',
+          alt: '',
+          src: 'https://www.accessvouch.com/wp-content/uploads/2022/11/PUBG-NEW.png'
+        },{
+          image_id: '423',
+          id: '23',
+          alt: '',
+          src: 'https://www.accessvouch.com/wp-content/uploads/2022/11/PUBG-NEW.png'
+        }],
+        
+      },
+      {
+        id: 4423,
+        title: 'PUBG MOBILE 4000 UC – Fast Delivery',
+        description: 'Pubg vouch',
+        type: 'simple',
+        brand: 'vouch',
+        category: 'pubg',
+        price: '760',
+        new: 'false',
+        stock: true,
+        sale: true,
+        discount: true,
+        variants: [{
+          id:'3124',
+          sku:'4123',
+          size:'3124',
+          color:'red',
+          image_id:'423'
+        }],
+        images :
+        [{
+          image_id: '112',
+          id: '23',
+          alt: '',
+          src: 'https://www.accessvouch.com/wp-content/uploads/2022/11/BATTLE-GROUND.png'
+        },{
+          image_id: '112',
+          id: '23',
+          alt: '',
+          src: 'https://www.accessvouch.com/wp-content/uploads/2022/11/BATTLE-GROUND.png'
+        }],
+        
+      },
+      {
+        id: 1243,
+        title: 'PSN UK £15 Gift Card',
+        description: 'Pubg vouch',
+        type: 'simple',
+        brand: 'vouch',
+        category: 'pubg',
+        price: '280',
+        new: 'false',
+        stock: true,
+        sale: true,
+        discount: true,
+        variants: [{
+          id:'3124',
+          sku:'4123',
+          size:'3124',
+          color:'red',
+          image_id:'423'
+        }],
+        images :
+        [{
+          image_id: '423',
+          id: '23',
+          alt: '',
+          src: 'https://www.accessvouch.com/wp-content/uploads/2022/11/PLAYSTATION-NEW.png'
+        },{
+          image_id: '423',
+          id: '23',
+          alt: '',
+          src: 'https://www.accessvouch.com/wp-content/uploads/2022/11/PLAYSTATION-NEW.png'
+        }],
+        
+      },
+      {
+        id: 1243,
+        title: 'Nintendo $10 Eshop Digital Card',
+        description: 'Pubg vouch',
+        type: 'simple',
+        brand: 'vouch',
+        category: 'pubg',
+        price: '270',
+        new: 'false',
+        stock: true,
+        sale: true,
+        discount: true,
+        variants: [{
+          id:'3124',
+          sku:'4123',
+          size:'3124',
+          color:'red',
+          image_id:'423'
+        }],
+        images :
+        [{
+          image_id: '423',
+          id: '23',
+          alt: '',
+          src: 'https://www.accessvouch.com/wp-content/uploads/2022/11/SETUP.png'
+        },{
+          image_id: '423',
+          id: '23',
+          alt: '',
+          src: 'https://www.accessvouch.com/wp-content/uploads/2022/11/SETUP.png'
+        }],
+        
+      },
+      {
+        id: 1243,
+        title: 'XBOX Game Pass',
+        description: 'Pubg vouch',
+        type: 'simple',
+        brand: 'vouch',
+        category: 'pubg',
+        price: '690',
+        new: 'false',
+        stock: true,
+        sale: true,
+        discount: true,
+        variants: [{
+          id:'3124',
+          sku:'4123',
+          size:'3124',
+          color:'red',
+          image_id:'423'
+        }],
+        images :
+        [{
+          image_id: '423',
+          id: '23',
+          alt: '',
+          src: 'https://www.accessvouch.com/wp-content/uploads/2022/11/f46440ff10413a24c8ad504e5e8a6099.jpg'
+        },{
+          image_id: '423',
+          id: '23',
+          alt: '',
+          src: 'https://www.accessvouch.com/wp-content/uploads/2022/11/f46440ff10413a24c8ad504e5e8a6099.jpg'
+        }],
+        
+      },
+      {
+        id: 1243,
+        title: 'Razor Gold Card',
+        description: 'Pubg vouch',
+        type: 'simple',
+        brand: 'vouch',
+        category: 'pubg',
+        price: '340',
+        new: 'false',
+        stock: true,
+        sale: true,
+        discount: true,
+        variants: [{
+          id:'3124',
+          sku:'4123',
+          size:'3124',
+          color:'red',
+          image_id:'423'
+        }],
+        images :
+        [{
+          image_id: '423',
+          id: '23',
+          alt: '',
+          src: 'https://www.accessvouch.com/wp-content/uploads/2022/11/Razor-Gold-100-USD.png'
+        },{
+          image_id: '423',
+          id: '23',
+          alt: '',
+          src: 'https://www.accessvouch.com/wp-content/uploads/2022/11/Razor-Gold-100-USD.png'
+        }],
+        
+      },
+      {
+        id: 1243,
+        title: 'PUBG Mobile Card',
+        description: 'Pubg vouch',
+        type: 'simple',
+        brand: 'vouch',
+        category: 'pubg',
+        price: '550',
+        new: 'false',
+        stock: true,
+        sale: true,
+        discount: true,
+        variants: [{
+          id:'3124',
+          sku:'4123',
+          size:'3124',
+          color:'red',
+          image_id:'423'
+        }],
+        images :
+        [{
+          image_id: '423',
+          id: '23',
+          alt: '',
+          src: 'https://www.accessvouch.com/wp-content/uploads/2022/11/PUPG-US.png'
+        },{
+          image_id: '423',
+          id: '23',
+          alt: '',
+          src: 'https://www.accessvouch.com/wp-content/uploads/2022/11/PUPG-US.png'
+        }],
+        
+      },
+      // {
+      //   id: 1243,
+      //   title: 'iTunes 10 USD – USA',
+      //   description: 'Pubg vouch',
+      //   type: 'simple',
+      //   brand: 'vouch',
+      //   category: 'pubg',
+      //   price: '650',
+      //   new: 'false',
+      //   stock: true,
+      //   sale: true,
+      //   discount: true,
+      //   variants: [{
+      //     id:'3124',
+      //     sku:'4123',
+      //     size:'3124',
+      //     color:'red',
+      //     image_id:'423'
+      //   }],
+      //   images :
+      //   [{
+      //     image_id: '423',
+      //     id: '23',
+      //     alt: '',
+      //     src: 'https://www.accessvouch.com/wp-content/uploads/2022/11/ITONE.png'
+      //   },{
+      //     image_id: '423',
+      //     id: '23',
+      //     alt: '',
+      //     src: 'https://www.accessvouch.com/wp-content/uploads/2022/11/ITONE.png'
+      //   }],
+        
+      // },
+      {
+        id: 1243,
+        title: 'PSN UAE 5$ – Fast Delivery',
+        description: 'Pubg vouch',
+        type: 'simple',
+        brand: 'vouch',
+        category: 'pubg',
+        price: '1200',
+        new: 'false',
+        stock: true,
+        sale: true,
+        discount: true,
+        variants: [{
+          id:'3124',
+          sku:'4123',
+          size:'3124',
+          color:'red',
+          image_id:'423'
+        }],
+        images :
+        [{
+          image_id: '423',
+          id: '23',
+          alt: '',
+          src: 'https://www.accessvouch.com/wp-content/uploads/2022/11/PLAY-STATION.png'
+        },{
+          image_id: '423',
+          id: '23',
+          alt: '',
+          src: 'https://www.accessvouch.com/wp-content/uploads/2022/11/PLAY-STATION.png'
+        }],
+        
+      }
+    ]
+    }
+  }
+
+  console.log({data})
   const context = useContext(CartContext);
   const wishListContext = useContext(WishlistContext);
   const compareContext = useContext(CompareContext);
@@ -87,7 +391,7 @@ const TabContent = ({
           </Col>
         ) : (
           <div className="row mx-0 margin-default">
-            <div className="col-xl-3 col-lg-4 col-6">
+            {/* <div className="col-xl-3 col-lg-4 col-6">
               <PostLoader />
             </div>
             <div className="col-xl-3 col-lg-4 col-6">
@@ -98,7 +402,7 @@ const TabContent = ({
             </div>
             <div className="col-xl-3 col-lg-4 col-6">
               <PostLoader />
-            </div>
+            </div> */}
           </div>
         )
       ) : (
@@ -180,7 +484,7 @@ const SpecialProducts = ({
               >
                 NEW ARRIVAL
               </Tab>
-              <Tab
+              {/* <Tab
                 className={activeTab == "furniture" ? "active" : ""}
                 onClick={() => setActiveTab("furniture")}
               >
@@ -191,13 +495,13 @@ const SpecialProducts = ({
                 onClick={() => setActiveTab("furniture")}
               >
                 SPECIAL
-              </Tab>
+              </Tab> */}
             </TabList>
 
             <TabPanel>
               <TabContent
                 data={data}
-                loading={loading}
+                loading={false}
                 startIndex={0}
                 endIndex={8}
                 cartClass={cartClass}

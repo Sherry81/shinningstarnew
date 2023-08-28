@@ -83,7 +83,7 @@ const ProductSection = () => {
 
   return (
     <section className="section-b-space ratio_asos">
-      <Container>
+      {/* <Container>
         <Row>
           <Col className="product-related">
             <h2>related products</h2>
@@ -329,7 +329,7 @@ const ProductSection = () => {
         ) : (
           ""
         )}
-      </Container>
+      </Container> */}
     </section>
   );
 };

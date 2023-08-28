@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
     "start": "next start",
-    "build": "next build"
+    "build": "next build && next export"
   },
   "keywords": [],
   "author": "",
@@ -59,6 +59,6 @@
     "reactstrap": "^8.10.0",
     "responsive-loader": "^3.0.4",
     "rxjs-compat": "^6.6.7",
-    "sass": "^1.52.3"
+    "sass": "^1.64.1"
   }
 }

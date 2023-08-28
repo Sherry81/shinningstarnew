@@ -111,7 +111,7 @@ const HeaderEleven = ({ logoName }) => {
                             </div>
                             <div className="call_us">
                               <h5>
-                                Call Us: <span>123-456-7898</span>
+                                Call Us: <span>0334-3317380</span>
                               </h5>
                             </div>
                           </div>

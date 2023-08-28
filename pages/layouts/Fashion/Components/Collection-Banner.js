@@ -45,7 +45,7 @@ const CollectionBanner = () => {
   return (
     <Fragment>
       {/*collection banner*/}
-      <section className="pb-0">
+      {/* <section className="pb-0">
         <Container>
           <Row className="partition2">
             {Data.map((data, i) => {
@@ -62,7 +62,7 @@ const CollectionBanner = () => {
             })}
           </Row>
         </Container>
-      </section>
+      </section> */}
       {/*collection banner end*/}
     </Fragment>
   );

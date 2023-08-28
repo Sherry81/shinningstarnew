@@ -500,7 +500,7 @@ const Data = [
       },
       {
         title: "About Us",
-        link: "/page/about-us",
+        link: "/page/about-usd",
       },
       {
         title: "Search",
@@ -555,6 +555,10 @@ const Data = [
       {
         title: " FAQ",
         link: "/page/faq",
+      },
+      {
+        title: "Terms and Conditions",
+        link: "/page/terms-and-conditions",
       },
     ],
   },

@@ -40,6 +40,7 @@ const GET_SINGLE_PRODUCTS = gql`
 `;
 
 const LeftSidebarPage = ({ pathId }) => {
+  console.log({pathId})
   var { loading, data } = useQuery(GET_SINGLE_PRODUCTS, {
     variables: {
       id: parseInt(pathId),

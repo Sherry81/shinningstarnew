@@ -56,7 +56,7 @@ const MasterFooter = ({
                       <div>
                         <h4>KNOW IT ALL FIRST!</h4>
                         <p>
-                          Never Miss Anything From Multikart By Signing Up To
+                          Never Miss Anything From Shining Vouch By Signing Up To
                           Our Newsletter.
                         </p>
                       </div>
@@ -110,7 +110,7 @@ const MasterFooter = ({
                     <div className="footer-logo">
                       <LogoImage logo={logoName} />
                     </div>
-                    <p>
+                    {/* <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam,
@@ -152,12 +152,12 @@ const MasterFooter = ({
                           </a>
                         </li>
                       </ul>
-                    </div>
+                    </div> */}
                   </div>
                 </Collapse>
               </Col>
               <Col className="offset-xl-1">
-                <div className="sub-title">
+                {/* <div className="sub-title">
                   <div
                     className={`footer-title ${isOpen && collapse == 2 ? "active" : ""
                       } `}
@@ -202,10 +202,10 @@ const MasterFooter = ({
                       </ul>
                     </div>
                   </Collapse>
-                </div>
+                </div> */}
               </Col>
               <Col>
-                <div className="sub-title">
+                {/* <div className="sub-title">
                   <div
                     className={`footer-title ${isOpen && collapse == 3 ? "active" : ""
                       } `}
@@ -245,7 +245,7 @@ const MasterFooter = ({
                       </ul>
                     </div>
                   </Collapse>
-                </div>
+                </div> */}
               </Col>
               <Col>
                 <div className="sub-title">
@@ -271,19 +271,18 @@ const MasterFooter = ({
                     <div className="footer-contant">
                       <ul className="contact-list">
                         <li>
-                          <i className="fa fa-map-marker"></i>Multikart Demo
-                          Store, Demo store India 345-659
+                          <i className="fa fa-map-marker"></i>Jabeen Plaza, Near Frere Road, A.R Suzuki Showroom, Karachi
                         </li>
                         <li>
-                          <i className="fa fa-phone"></i>Call Us: 123-456-7898
+                          <i className="fa fa-phone"></i>Call Us: 0334-3317380
                         </li>
                         <li>
                           <i className="fa fa-envelope-o"></i>Email Us:{" "}
-                          <a href="#">Support@Fiot.com</a>
+                          <a href="#">support@shiningvouch.com</a>
                         </li>
-                        <li>
+                        {/* <li>
                           <i className="fa fa-fax"></i>Fax: 123456
-                        </li>
+                        </li> */}
                       </ul>
                     </div>
                   </Collapse>
@@ -293,10 +292,10 @@ const MasterFooter = ({
           </Container>
         </section>
 
-        <CopyRight
+        {/* <CopyRight
           layout={layoutClass}
           fluid={CopyRightFluid ? CopyRightFluid : ""}
-        />
+        /> */}
       </footer>
     </div>
   );

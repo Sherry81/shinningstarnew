@@ -195,7 +195,7 @@ const ProductItem = ({
               <div className="product-right">
                 <h2> {product.title} </h2>
                 <h3>
-                  {currency.symbol}
+                   PKR 
                   {(product.price * currency.value).toFixed(2)}
                 </h3>
                 {product.variants ? (

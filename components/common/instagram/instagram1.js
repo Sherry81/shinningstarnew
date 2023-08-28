@@ -59,8 +59,8 @@ const Instagram = ({ type }) => {
   });
 
   return (
-    <section className="instagram ratio_square">
-      <Container
+    <section>
+      {/* <Container
         className={`${
           type == "nursery" ||
           type == "bags" ||
@@ -104,7 +104,7 @@ const Instagram = ({ type }) => {
             </div>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
     </section>
   );
 };

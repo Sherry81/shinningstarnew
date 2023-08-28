@@ -164,13 +164,13 @@ const FooterFive = ({ layoutClass, logoName }) => {
                         <div className="footer-contant">
                           <ul className="contact-details">
                             <li>
-                              Multikart Demo Store, Demo store India 345-659
+                            Jabeen Plaza, Near Frere Road, A.R Suzuki Showroom, Karachi
                             </li>
-                            <li>Call Us: 123-456-7898</li>
+                            <li>Call Us: 0334-3317380</li>
                             <li>
-                              Email Us: <a href="#">Support@Fiot.com</a>
+                              Email Us: <a href="#">support@shiningvouch.com</a>
                             </li>
-                            <li>Fax: 123456</li>
+                            {/* <li>Fax: 123456</li> */}
                           </ul>
                         </div>
                       </Collapse>

@@ -81,7 +81,7 @@ const SideBar = () => {
               <i className="fa fa-angle-left pe-2" aria-hidden="true"></i> Back
             </div>
           </a>
-          <ul id="sub-menu" className="sidebar-menu">
+          {/* <ul id="sub-menu" className="sidebar-menu">
             <li>
               <a href="#" onClick={(e) => handleMegaSubmenu(e)}>
                 clothing
@@ -350,7 +350,7 @@ const SideBar = () => {
             <li>
               <a href="#">kitchen</a>
             </li>
-          </ul>
+          </ul> */}
         </nav>
       </div>
     </Fragment>

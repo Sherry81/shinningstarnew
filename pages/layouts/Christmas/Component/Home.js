@@ -25,11 +25,11 @@ const Home = () => {
   };
   return (
     <section className="p-0 snow-slider">
-      <Slider className="slide-1 home-slider">
+      {/* <Slider className="slide-1 home-slider">
         {banners.map((banner, i) => {
           return <Banner key={i} img={banner} />;
         })}
-      </Slider>
+      </Slider> */}
     </section>
   );
 };
