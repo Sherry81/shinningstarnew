@@ -226,7 +226,7 @@ const TabContent = ({
         type: 'simple',
         brand: 'vouch',
         category: 'pubg',
-        price: '340',
+        price: '30120',
         new: 'false',
         stock: true,
         sale: true,
@@ -464,8 +464,8 @@ const SpecialProducts = ({
             ""
           ) : (
             <div className={title}>
-              <h4>exclusive products</h4>
-              <h2 className={inner}>special products</h2>
+              {/* <h4>exclusive products</h4> */}
+              <h2 className={inner}>Exclusive products</h2>
               {line ? (
                 <div className="line"></div>
               ) : hrClass ? (
@@ -482,7 +482,7 @@ const SpecialProducts = ({
                 className={activeTab == type ? "active" : ""}
                 onClick={() => setActiveTab(type)}
               >
-                NEW ARRIVAL
+                
               </Tab>
               {/* <Tab
                 className={activeTab == "furniture" ? "active" : ""}
