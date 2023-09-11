@@ -53,7 +53,7 @@ const OrderSuccess2 = () => (
                       Way,
                     </p>
                     <p style={{ fontSize: "14px" }}>
-                      Transaction ID : 267676GHERT105467,
+                      Transaction ID : T202309050656252651,
                     </p>
                   </td>
                 </tr>

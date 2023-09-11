@@ -15,7 +15,11 @@ const CheckoutPage = () => {
   const symbol = curContext.state.symbol;
   const [obj, setObj] = useState({});
   const [payment, setPayment] = useState("cod");
-  const { register, handleSubmit, formState: { errors } } = useForm(); // initialise the hook
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm(); // initialise the hook
   const router = useRouter();
 
   const checkhandle = (value) => {
@@ -23,16 +27,67 @@ const CheckoutPage = () => {
   };
 
   const onSubmit = (data) => {
-    if (data !== "") {
-      alert("You submitted the form and stuff!");
-      router.push({
-        pathname: "/page/order-success",
-        state: { items: cartItems, orderTotal: cartTotal, symbol: symbol },
-      });
-    } else {
-      errors.showMessages();
-    }
+    setTimeout(() => {
+      
+      if (data !== "") {
+        let payload = {
+          pp_Language: "EN",
+          pp_MerchantID: "MC59260",
+          pp_SubMerchantID: "",
+          pp_Password: "3ut95u8z10",
+          pp_BankID: "",
+          pp_ProductID: "",
+          pp_TxnRefNo: "T1693854000000",
+          pp_Amount: "100",
+          pp_TxnCurrency: "PKR",
+          pp_TxnDateTime: "1693771592082",
+          pp_BillReference: "billRef",
+          pp_Description: "Description of transaction",
+          pp_TxnExpiryDateTime: "1693854000000",
+          pp_SecureHash:
+            "47e0908c81cb403941b95c1f52c7c603ea8c9a20e4b803349cedc8e4cf5434e3",
+          ppmpf_1: "",
+          ppmpf_2: "",
+          ppmpf_3: "",
+          ppmpf_4: "",
+          ppmpf_5: "",
+          pp_MobileNumber: "03123456789",
+          pp_CNIC: "345678",
+        };
+        checkoutOrder(
+          "https://sandbox.jazzcash.com.pk/ApplicationAPI/API/2.0/Purchase/DoMWalletTransaction",
+          payload
+        ).then((data) => {
+          console.log(data); // JSON data parsed by `data.json()` call
+        });
+        alert("Transaction Successful");
+        router.push({
+          pathname: "/page/order-success",
+          state: { items: cartItems, orderTotal: cartTotal, symbol: symbol },
+        });
+      } else {
+        errors.showMessages();
+      }
+    }, 2500);
   };
+
+  async function checkoutOrder(url = "", data = {}) {
+    // Default options are marked with *
+    const response = await fetch(url, {
+      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      // mode: "cors", // no-cors, *cors, same-origin
+      // cache: "no-cache", // *default, no-cache, Qreload, force-cache, only-if-cached
+      // credentials: "same-origin", // include, *same-origin, omit
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      // redirect: "follow", // manual, *follow, error
+      // referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify(data), // body data type must match "Content-Type" header
+    });
+    return response.json(); // parses JSON response into native JavaScript objects
+  }
 
   const setStateFromInput = (event) => {
     obj[event.target.name] = event.target.value;
@@ -57,7 +112,7 @@ const CheckoutPage = () => {
                         type="text"
                         className={`${errors.firstName ? "error_border" : ""}`}
                         name="first_name"
-                        {...register('first_name', { required: true })}
+                        {...register("first_name", { required: true })}
                       />
                       <span className="error-message">
                         {errors.firstName && "First name is required"}
@@ -69,7 +124,7 @@ const CheckoutPage = () => {
                         type="text"
                         className={`${errors.last_name ? "error_border" : ""}`}
                         name="last_name"
-                        {...register('last_name', { required: true })}
+                        {...register("last_name", { required: true })}
                       />
                       <span className="error-message">
                         {errors.last_name && "Last name is required"}
@@ -81,11 +136,25 @@ const CheckoutPage = () => {
                         type="text"
                         name="phone"
                         className={`${errors.phone ? "error_border" : ""}`}
-                        {...register('phone', { pattern: /\d+/ })}
+                        {...register("phone", { pattern: /\d+/ })}
                       />
                       <span className="error-message">
                         {errors.phone && "Please enter number for phone."}
                       </span>
+                    </div>
+                    <div className="form-group col-md-12 col-sm-6 col-xs-12">
+                      <div className="field-label">CNIC</div>
+                      <input
+                        //className="form-control"
+                        type="text"
+                        className={`${errors.state ? "error_border" : ""}`}
+                        name="cnic"
+                        {...register("state", { required: true })}
+                        onChange={setStateFromInput}
+                      />
+                      {/* <span className="error-message">
+                        {errors.state && "select one state"}
+                      </span> */}
                     </div>
                     <div className="form-group col-md-6 col-sm-6 col-xs-12">
                       <div className="field-label">Email Address</div>
@@ -94,7 +163,7 @@ const CheckoutPage = () => {
                         className={`${errors.email ? "error_border" : ""}`}
                         type="text"
                         name="email"
-                        {...register('email', {
+                        {...register("email", {
                           required: true,
                           pattern: /^\S+@\S+$/i,
                         })}
@@ -105,7 +174,11 @@ const CheckoutPage = () => {
                     </div>
                     <div className="form-group col-md-12 col-sm-12 col-xs-12">
                       <div className="field-label">Country</div>
-                      <select name="country" {...register("country", { required: true })}>
+                      <select
+                        name="country"
+                        {...register("country", { required: true })}
+                      >
+                        <option>Pakistan</option>
                         <option>India</option>
                         <option>South Africa</option>
                         <option>United State</option>
@@ -119,7 +192,11 @@ const CheckoutPage = () => {
                         className={`${errors.address ? "error_border" : ""}`}
                         type="text"
                         name="address"
-                        {...register("address", { required: true, min: 20, max: 120 })}
+                        {...register("address", {
+                          required: true,
+                          min: 20,
+                          max: 120,
+                        })}
                         placeholder="Street address"
                       />
                       <span className="error-message">
@@ -133,7 +210,7 @@ const CheckoutPage = () => {
                         type="text"
                         className={`${errors.city ? "error_border" : ""}`}
                         name="city"
-                        {...register('city', { required: true })}
+                        {...register("city", { required: true })}
                         onChange={setStateFromInput}
                       />
                       <span className="error-message">
@@ -147,7 +224,7 @@ const CheckoutPage = () => {
                         type="text"
                         className={`${errors.state ? "error_border" : ""}`}
                         name="state"
-                        {...register('state', { required: true })}
+                        {...register("state", { required: true })}
                         onChange={setStateFromInput}
                       />
                       <span className="error-message">
@@ -161,7 +238,7 @@ const CheckoutPage = () => {
                         type="text"
                         name="pincode"
                         className={`${errors.pincode ? "error_border" : ""}`}
-                        {...register('pincode', { pattern: /\d+/ })}
+                        {...register("pincode", { pattern: /\d+/ })}
                       />
                       <span className="error-message">
                         {errors.pincode && "Required integer"}
@@ -287,13 +364,16 @@ const CheckoutPage = () => {
                               <PayPalButton
                                 amount="0.01"
                                 onSuccess={(details, data) => {
-                                  alert("Transaction completed by " + details.payer.name.given_name);
+                                  alert(
+                                    "Transaction completed by " +
+                                      details.payer.name.given_name
+                                  );
 
                                   return fetch("/paypal-transaction-complete", {
                                     method: "post",
                                     body: JSON.stringify({
-                                      orderID: data.orderID
-                                    })
+                                      orderID: data.orderID,
+                                    }),
                                   });
                                 }}
                               />
