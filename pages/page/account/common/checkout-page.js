@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Media, Container, Form, Row, Col } from "reactstrap";
 import CartContext from "../../../../helpers/cart";
-import paypal from "../../../../public/assets/images/paypal.png";
+import jazzCash from "../../../../public/assets/images/jazzcashlogo.png";
 import { PayPalButton } from "react-paypal-button-v2";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
@@ -344,9 +344,9 @@ const CheckoutPage = () => {
                                     onClick={() => checkhandle("paypal")}
                                   />
                                   <label htmlFor="payment-1">
-                                    PayPal
+                                    JazzCash
                                     <span className="image">
-                                      <Media src={paypal.src} alt="" />
+                                      <Media src={jazzCash} alt="" />
                                     </span>
                                   </label>
                                 </div>
