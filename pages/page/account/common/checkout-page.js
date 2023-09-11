@@ -332,7 +332,7 @@ const CheckoutPage = () => {
                                     defaultChecked={true}
                                     onClick={() => checkhandle("cod")}
                                   />
-                                  <label htmlFor="payment-2">COD</label>
+                                  <label htmlFor="payment-2">JazzCash</label>
                                 </div>
                               </li>
                               <li>
@@ -342,11 +342,12 @@ const CheckoutPage = () => {
                                     name="payment-group"
                                     id="payment-1"
                                     onClick={() => checkhandle("paypal")}
+                                    disabled
                                   />
                                   <label htmlFor="payment-1">
-                                    JazzCash
+                                    EasyPaisa
                                     <span className="image">
-                                      <Media src={jazzCash} alt="" />
+                                      <img src={jazzCash} alt="" />
                                     </span>
                                   </label>
                                 </div>
@@ -356,28 +357,10 @@ const CheckoutPage = () => {
                         </div>
                         {cartTotal !== 0 ? (
                           <div className="text-end">
-                            {payment === "cod" ? (
                               <button type="submit" className="btn-solid btn">
                                 Place Order
                               </button>
-                            ) : (
-                              <PayPalButton
-                                amount="0.01"
-                                onSuccess={(details, data) => {
-                                  alert(
-                                    "Transaction completed by " +
-                                      details.payer.name.given_name
-                                  );
-
-                                  return fetch("/paypal-transaction-complete", {
-                                    method: "post",
-                                    body: JSON.stringify({
-                                      orderID: data.orderID,
-                                    }),
-                                  });
-                                }}
-                              />
-                            )}
+                            
                           </div>
                         ) : (
                           ""
